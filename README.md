@@ -24,8 +24,6 @@ The dashboard follows one line of reasoning: state the headline number, break it
 
 United averages **3.11** on 125 reviews; other airlines average **3.39**. The gap (0.28, about 2.4 standard errors) is small but real. The recommendation gap (59% vs 64%) is within the noise of a 125-review sample. United's rating bands are 33.6% satisfied, 41.6% neutral and 24.8% dissatisfied.
 
-![Rating comparison](images/rating_comparison.png)
-![Recommendation comparison](images/recommendation_comparison.png)
 
 ### 2. Categories
 
