@@ -39,14 +39,12 @@ United averages **3.11** on 125 reviews; other airlines average **3.39**. The ga
 
 Catering is the lowest category for both recommenders (3.47) and non-recommenders (1.10). Staff service has the largest recommendation gap, so staff interaction is the category most associated with whether a customer recommends the lounge. Recommenders rate every category higher, so this shows association, not cause.
 
-![Category ratings](images/category_ratings.png)
-![Recommendation gap](images/recommendation_gap.png)
 
 ### 3. Over time
 
 United's rating and recommendation rate rose from 2015 to 2018, then fluctuated at a higher level than 2015. The two measures move together. Each year after 2018 has 13 or fewer reviews, so individual year-to-year changes are not reliable.
 
-![Trend over time](images/trend_over_time.png)
+
 
 ### 4. Comparison with others
 
@@ -54,8 +52,7 @@ United's rating and recommendation rate rose from 2015 to 2018, then fluctuated 
 
 **Against American and Delta.** United is lowest in all seven categories. Wi-Fi is the smallest gap (−0.12). Catering is low at all three airlines (United 2.54, American 2.73, Delta 2.67), so the catering gap is smaller against the Big 3 (−0.16) than against all other airlines. Cleanliness, staff service and washrooms are each about a third of a point behind.
 
-![Rating by lounge type](images/rating_by_lounge_type.png)
-![Big 3 comparison](images/big3_comparison.png)
+
 
 ## Recommendation
 
@@ -67,9 +64,7 @@ Put the next lounge service spend on **catering first and bar and beverages seco
 |---|---|
 | `airlines.csv` | Airline lookup (`airline_id`, `airline_name`) |
 | `fct_lounge_reviews.csv` | One row per lounge review: airline, airport, recommended flag, verified flag, submission date, and seven category scores |
-| `dim_lounges.csv` | [describe, e.g. lounge type and name by lounge] |
-
-Source: [add source / link here].
+| `dim_lounges.csv` | 
 
 - Reviews are filtered to **2015–2025**, and rows with an unresolved airline name (`"Read more"`) are excluded.
 - **Overall rating** is the mean of a review's seven category scores, ignoring blanks.
