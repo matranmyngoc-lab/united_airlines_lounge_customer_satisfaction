@@ -2,7 +2,7 @@
 
 How satisfied are United Airlines lounge customers, what is pulling the rating down, and where should United spend first to improve? This project analyzes 125 United lounge reviews (2015–2025) against 2,936 reviews from 152 other airlines, using SQL for the metrics, Python for the priority plot, and a dashboard for the story.
 
-![Dashboard overview](images/dashboard_overview.png)
+![Dashboard overview](images/united-airlines-lounge-customer-satisfaction.pdf)
 
 ## Key takeaway
 
