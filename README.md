@@ -11,11 +11,13 @@ United's lounge rating is **close to other airlines** (3.11 vs 3.39). **Catering
 
 The measure I care about most is the **overall rating**, because it is the simplest way to say how satisfied customers are. But the overall rating is the average of up to **seven category scores** (comfort, cleanliness, bar and beverages, catering, washrooms, Wi-Fi and staff service), so one number cannot show how each category is doing. United's 3.11 hides a range from 3.70 (Wi-Fi) to 2.54 (catering). A strong category can mask a weak one.
 
-So the analysis does two things. First, it states the overall number and tests whether it is real. Second, it **breaks the rating into the average of each of the seven categories** to find what is driving it, then checks that finding over time and against other airlines.
+So my analysis has two parts. First, it examines how the categories and services can be compared within the company, then compare those services to another airlines. 
+
+To be more specific, it investigates the overall number and tests whether it is real. Second, it **breaks the rating into the average of each of the seven categories** to find what is driving it, then checks that finding over time and against other airlines.
 
 | Step | Question | Charts |
 |---|---|---|
-| 1 | What is the overall number? | Rating bands; rating comparison; recommendation comparison; rating band distribution |
+| 1 | What is the overall number? | KPI Cards, Rating bands; rating comparison; recommendation comparison; rating band distribution |
 | 2 | Which of the seven categories pull it down? | Category averages; category review counts; recommendation gap |
 | 3 | Is it rising or falling? | Satisfaction vs recommendation over time |
 | 4 | Does it make sense next to others? | Rating and recommendation by lounge type; Big 3 comparison |
@@ -32,154 +34,105 @@ So the analysis does two things. First, it states the overall number and tests w
 
 ### Chart 1.1 Rating bands (KPI cards)
 
-**Business question:** Of the customers who review United's lounges, how many are happy, indifferent or unhappy?
+**Business question:** Of the customers who review United's lounges, how many are happy, indifferent or unhappy? What are the overall rating for each category?
 
 **Metric and why:** the share of reviews in each rating band (Good, Medium, Bad). An average alone can hide a split between very happy and very unhappy customers. Shares show how the ratings are distributed.
 
 **What it shows:** 33.6% satisfied, 41.6% neutral, 24.8% dissatisfied. The most common outcome is neutral, and about one in four reviews is negative.
 
 
+### Chart 1.2 Categories review count
+
+**Business question:** How much can I trust each category average?
+
+**Metric and why:** the number of reviews that scored each category, shown next to its average rating. Reviewers can skip categories, so each average rests on a different number of scores. A high or low average built on a few reviews can mislead, while one built on many is more reliable. The count tells me how much weight each average can carry. It also shows coverage: the share of the 125 United reviews that scored the category.
+
+| Category | Average | Scores | Coverage | 95% margin |
+|---|---|---|---|---|
+| Wi-Fi | 3.70 | 117 | 94% | ±0.23 |
+| Cleanliness | 3.38 | 124 | 99% | ±0.24 |
+| Staff service | 3.17 | 121 | 97% | ±0.28 |
+| Comfort | 3.15 | 125 | 100% | ±0.24 |
+| Washrooms | 3.02 | 103 | 82% | ±0.28 |
+| Bar and beverages | 2.91 | 113 | 90% | ±0.27 |
+| Catering | 2.54 | 122 | 98% | ±0.27 |
+
+**What it shows:** every category has more than 100 scores (103 to 125), so no average rests on a thin sample, and each is reliable to about ±0.25 points. 
+- **Wi-Fi and catering are clearly different.** With 117 and 122 scores, the gap of 1.16 points is about 6.5 standard errors. Wi-Fi really is rated higher than catering.
+- **Catering is clearly below the middle group.** It trails comfort by about 0.6 points, around 3 standard errors.
+- **The middle categories can't be ranked.** Staff service (3.17) and comfort (3.15) differ by 0.01, and washrooms (3.02) and bar and beverages (2.91) by 0.11. Categories within about half a point of each other are statistically tied. Bar and beverages is only borderline below the others (about 1.9 standard errors from catering).
+
+So the supported reading is three tiers: Wi-Fi (and probably cleanliness) clearly high, a middle group that can't be ordered, and catering clearly low.
+
+**Caution:** the count shows how many reviewers scored a category, not whether the ones who skipped it differ from those who scored it. Washrooms was skipped by 18% of reviewers, so its average may be less representative than the others.
+
+**Takeaway:** United's overall rating of 3.11 hides a wide spread across categories, from 3.70 for Wi-Fi to 2.54 for catering. Because every category has 100+ scores, that spread is reliable. Catering is the solid priority to improve. Bar and beverages is a lower-confidence second, since it isn't clearly worse than the middle group. 
+
+
+### Chart 1.3 & 1.4:  Recommendation rate and Recommendation gap
+
+**Business question:** Which categories separate customers who recommend the lounge from those who don't?
+
+**Metric and why:** each category's average among recommenders (74 reviews) minus its average among non-recommenders (51 reviews). A low average shows where customers are unhappy. The gap shows how closely a category goes with recommending. Together they show where improvement is most likely to matter.
+
+**What it shows:** catering is the lowest category for both groups (3.47 and 1.10), and 92% of non-recommenders rated it 2 or lower, so it is poor for happy and unhappy customers alike. Staff service has the largest gap (2.58), but each gap has a margin of about ±0.3, so it isn't clearly larger than catering, bar and beverages or comfort. Wi-Fi has the smallest gap (1.73) and is clearly less tied to recommending than staff service. Recommenders rate every category about 2 points higher, so this shows association, not which category causes a recommendation.
+
+### Chart 1.3 Satisfaction vs recommendation rate over time
+
+**Business question:** Is United's lounge satisfaction improving, and do rating and recommendation move together?
+
+**Metric and why:** the yearly average overall rating and recommendation rate, with the number of reviews behind each year. A single overall average hides direction, so the trend shows whether satisfaction is rising, falling or flat. Showing the review count tells me how much each yearly point can be trusted.
+
+**What it shows:** Both the satisfaction rating and the recommendation rate rise from 2015 to 2018, then fluctuate. The review counts show how much to trust each year: after 2019, every year has fewer than 10 reviews (1 to 9), so those yearly numbers are too thin to read, and the sharp drops and spikes (2020, 2021, 2025) are individual reviewers, not trends. 2015 is the most reliable year (45 reviews), with a 2.59 rating and 38% recommending. The 80 reviews from 2016–2025 average 3.40 and 71%, a clear improvement over 2015.
+
+**Takeaway:** Lounge satisfaction is clearly better than in 2015, but there isn't enough data in recent years to say whether it kept rising or stayed flat. The supported message is "improved after 2015," not a continuous increase.
+
+
+### Recommendation rate by airport
+
+**Business question:** Do customers recommend United's lounges equally at every airport?
+
+**Metric and why:** the recommendation rate by airport, with the number of reviews. Lounges differ by location, so an airport view shows whether the overall rate hides strong and weak locations. Only airports with at least 11 reviews are shown.
+
+**What it shows:** Heathrow (93%, 14 reviews) and O'Hare (79%, 14) are clearly high. San Francisco (46%, 26) and Newark (36%, 11) are clearly low. Houston (64%, 11) can't be separated from the rest. With 11 to 26 reviews per airport, the margins are ±13 to ±28 points, so treat this as tiers, not a precise ranking.
+
+### Category ratings by airport 
+
+**Business question:** Is United's catering weakness specific to one airport, or does it show up everywhere?
+
+**Metric and why:** the average of each of the seven categories at each airport, shown as a heatmap. It tests whether the category findings from Step 2 hold across locations.
+
+**What it shows:** catering is the lowest category at four of the five airports and second-lowest at O'Hare, and it is below 2.5 at three of the four U.S. airports (San Francisco, Houston, Newark). Wi-Fi is the highest category at four of five. The overall ranking of airports matches the recommendation chart: Heathrow (4.41), O'Hare (3.75), Houston (3.23), San Francisco (2.80), Newark (2.57). Each cell rests on 11 to 26 scores, so only the broad pattern is reliable.
+
+**Takeaway:** the catering weakness appears at almost every airport, and the biggest differences between locations are in overall lounge quality. San Francisco, with the most reviews (26), is the best-supported problem location. Heathrow's and O'Hare's reviews are mostly from 2015–2020 and 2015–2022, so check them against recent data.
+
+### Lounge brand performance
+
+**Business question:** Do United's lounge brands differ in customer satisfaction?
+
+**Metric and why:** the average overall rating by brand (United Club, Polaris, other/unclassified), shown with the number of reviews behind each. Lounge names were standardized into United Club and Polaris. The review count shows how far each average can be trusted.
+
+**What it shows:** Polaris is the highest rated (4.28, 12 reviews), about one point above United Club (3.29, 56 reviews). Other/unclassified is lowest (2.32, 57 reviews), but it is a catch-all of unnamed and unmatched lounges, including many First Class reviews, so it isn't a brand. Polaris has fewer than 20 reviews, all from business-class lounges since 2017, so brand can't be separated from lounge type or timing.
+
+**Takeaway:** Polaris appears to be the best-liked lounge brand, but 46% of reviews have no usable brand and the Polaris sample is small, so this is a direction to check, not a conclusion.
+
 ### Chart 1.2 Average rating: United vs other airlines
 
 **Business question:** How does United's overall lounge rating compare with other airlines?
 
-**Metric and why:** the mean overall rating for United against all other airlines combined. It is the primary satisfaction measure and the one number that can be benchmarked directly. Using all other airlines as the benchmark gives a large comparison base (2,936 reviews, 152 airlines).
+**Metric and why:** the mean overall rating (the average of the seven category scores per review) for United against all other airlines combined. It is the primary satisfaction measure, and using all other airlines as the benchmark gives a large comparison base (2,936 reviews, 152 airlines).
 
-**What it shows:** United is at 3.11 against 3.39, a gap of 0.28. That is about 2.4 standard errors, so it is small but real.
+**What it shows:** United is at 3.11 against 3.39, a gap of 0.28. With 125 United reviews the margin on United's rating is about ±0.22, so the gap is small but real.
 
+### Recommendation rate: United vs other airlines
 
-### Chart 1.3 Recommendation rate: United vs other airlines
+**Business question:** Would customers recommend United's lounges as often as they recommend other airlines' lounges?
 
-**Business question:** Would customers actually recommend United's lounges as often as they recommend other airlines' lounges?
+**Metric and why:** the share of reviews where the customer would recommend the lounge. It measures a decision, so it checks whether the rating gap matters in practice.
 
-**Metric and why:** the recommendation rate. It measures a customer decision, not a score, so it checks whether the rating gap means anything in practice.
+**What it shows:** 59% against 64%. The 5-point gap is within the noise of a 125-review sample (about ±9 points), so there is no clear difference in recommendation.
 
-**What it shows:** 59% against 64%. The 5-point gap is about 1.1 standard errors, which is within the noise of a 125-review sample. On the decision that matters, United is not clearly behind.
-
-
-### Chart 1.4 Rating band distribution
-
-**Business question:** Is the gap in the middle of the rating distribution or in the tails?
-
-**Metric and why:** the share of reviews in each band for United and for other airlines, as 100% stacked bars. The mean can't say whether United has more unhappy customers or fewer happy ones. Stacked bands can.
-
-**What it shows:** the middle is similar (about 42% medium for both). United has more Bad reviews (about 25% vs 16%) and fewer Good ones (about 34% vs 42%). The gap sits in the tails.
-
-
-
-
-## Step 2. Which categories pull it down?
-
-This is the step that matters most. The overall rating is a mean of seven scores, so I looked at the average of **each** category.
-
-### Chart 2.1 Average rating by service category
-
-**Business question:** Which of the seven categories pull the overall rating down?
-
-**Metric and why:** the mean score of each category, sorted from highest to lowest. The overall rating is built from these seven, so taking it apart shows which parts drive it. The seven averages average about 3.12, close to the 3.11 overall (the small difference comes from blank scores).
-
-| Category | United average |
-|---|---|
-| Wi-Fi | 3.70 |
-| Cleanliness | 3.38 |
-| Staff service | 3.17 |
-| Comfort | 3.15 |
-| Washrooms | 3.02 |
-| Bar and beverages | 2.91 |
-| Catering | 2.54 |
-
-**What it shows:** catering (2.54) and bar and beverages (2.91) are the lowest, and Wi-Fi (3.70) the highest. The overall 3.11 hides a gap of more than a full point between the best and worst category.
-
-
-### Chart 2.2 Categories review count
-
-**Business question:** How many scores sit behind each category average, and how far can I trust it?
-
-**Metric and why:** the number of non-blank scores per category. Reviewers can skip categories, so averages rest on different numbers of reviews.
-
-**What it shows:** each category has 103 to 125 scores, enough to read the ranking, though not enough for small differences between neighbouring categories.
-
-
-### Chart 2.3 Recommendation gap
-
-**Business question:** Which categories separate customers who recommend the lounge from those who don't?
-
-**Metric and why:** each category's average among recommenders minus its average among non-recommenders. A low average shows where customers are unhappy. The gap shows where being unhappy goes with not recommending. Together they point to what matters most.
-
-**What it shows:** catering is the lowest for both groups (3.47 among recommenders, 1.10 among non-recommenders). Staff service has the largest gap, so staff interaction is the category most associated with whether a customer recommends. Wi-Fi has a relatively small gap. Recommenders rate every category higher, so this shows association, not cause.
-
-
-## Step 3. Is it rising or falling?
-
-### Chart 3.1 Satisfaction vs recommendation rate over time
-
-**Business question:** Is lounge satisfaction improving, and do rating and recommendation move together?
-
-**Metric and why:** the yearly average overall rating and yearly recommendation rate, drawn together. A single overall average hides direction. Showing two measures checks whether they tell the same story.
-
-**What it shows:** both rose from 2015 to 2018, then fluctuated at a higher level than in 2015, and they move together. Each year after 2018 has 13 or fewer reviews, so individual year-to-year changes are not reliable.
-
-
-## Step 4. Does it make sense next to others?
-
-### Chart 4.1 Average rating by lounge type
-
-**Business question:** Is United's gap concentrated in one type of lounge?
-
-**Metric and why:** the average overall rating for United and for other airlines within each lounge type. Lounge types serve different customers, so a pooled gap can come from just one of them.
-
-| Lounge type | United reviews | United | Others | Gap |
-|---|---|---|---|---|
-| Business Class | 48 | 3.29 | 3.35 | −0.06 |
-| First Class | 26 | 2.51 | 3.61 | −1.10 |
-| Frequent Flyer | 19 | 3.39 | 3.49 | −0.10 |
-| Members | 16 | 3.68 | 3.52 | +0.16 |
-| Pay to Use | 5 | 3.47 | 3.30 | +0.17 |
-| Unknown | 11 | 2.23 | 3.17 | −0.94 |
-
-**What it shows:** the gap sits in First Class and unknown-type lounges. Without those two groups, United is at 3.39 against 3.37 for others. Business Class, the largest group, is level with peers.
-
-
-
-### Chart 4.2 Recommendation rate by lounge type
-
-**Business question:** Do customers in each lounge type recommend United as often as they recommend others?
-
-**Metric and why:** the recommendation rate by lounge type for United and others, shown next to review counts. It confirms the pattern in 4.1 on the decision measure.
-
-**What it shows:** First Class (38% vs 68%) and unknown (18% vs 55%) trail clearly. Members (81% vs 66%) and Frequent Flyer (79% vs 70%) are ahead of peers, but with 16 and 19 reviews these are directional. Pay to Use has only 5 reviews and should not be read.
-
-
-### Chart 4.3 Service rating vs American and Delta
-
-**Business question:** Is each weak category a United problem, or weak across the industry?
-
-**Metric and why:** the average of each of the seven categories for United, American and Delta (2015–2025). Putting the closest competitors next to United separates United-specific weaknesses from industry-wide ones.
-
-| Category | United | American | Delta | United minus their average |
-|---|---|---|---|---|
-| Bar and beverages | 2.91 | 3.07 | 3.17 | −0.21 |
-| Catering | 2.54 | 2.73 | 2.67 | −0.16 |
-| Cleanliness | 3.38 | 3.76 | 3.70 | −0.35 |
-| Comfort | 3.15 | 3.44 | 3.21 | −0.18 |
-| Staff service | 3.17 | 3.59 | 3.42 | −0.34 |
-| Washrooms | 3.02 | 3.30 | 3.41 | −0.34 |
-| Wi-Fi | 3.70 | 3.82 | 3.81 | −0.12 |
-
-**What it shows:** United is lowest in all seven categories. Catering is low at all three airlines, so it is partly an industry-wide weakness, and the gap is smaller against the Big 3 (−0.16) than against all other airlines. Cleanliness, staff service and washrooms each trail by about a third of a point. American and Delta have only 73 and 38 reviews, so treat these gaps as directional.
-
-## Step 5. What should be fixed first?
-
-### Chart 5.1 Service improvement priority matrix
-
-**Business question:** Which categories should United improve first?
-
-**Metric and why:** each category is placed by two measures: its average rating (x-axis, how weak it is) and its recommendation gap (y-axis, how closely it goes with recommending). A category that is both low and strongly tied to recommendation is the best place to spend. Built in Python with Matplotlib (see `notebooks/`).
-
-**What it shows:** catering and bar and beverages land in the priority improvement quadrant. Staff service has the largest recommendation gap and needs a closer look. Wi-Fi has the highest rating and a small gap, so it should be maintained.
-
-
-
+**Takeaway:** United's overall rating is slightly lower than other airlines', but customers recommend United's lounges about as often. The small rating gap is why the analysis then looks at categories, time and lounge type for the source.
 ### Recommendation
 
 Put the next lounge service spend on **catering first and bar and beverages second**. Catering is the lowest of seven categories, the lowest for both recommenders and non-recommenders, and below American and Delta. Keep Wi-Fi where it is. Look at staff service, cleanliness and washrooms next.
@@ -195,18 +148,7 @@ Put the next lounge service spend on **catering first and bar and beverages seco
 **What they show:** Heathrow has the highest recommendation rate (92.86%) and Newark the lowest (36.36%). Catering is rated below 2.5 at all six U.S. airports shown, which supports Step 2. Polaris (4.28) is rated above United Club (3.29). These cells have **fewer than 20 reviews** except United Club and unclassified, so they are directional only.
 
 
-## Data
 
-| File | Description |
-|---|---|
-| `airlines.csv` | Airline lookup (`airline_id`, `airline_name`) |
-| `fct_lounge_reviews.csv` | One row per lounge review: airline, airport, recommended flag, verified flag, submission date, and seven category scores |
-| `dim_lounges.csv` | [describe, e.g. lounge type and name by lounge] |
-
-Source: [add source / link here].
-
-- Reviews are filtered to **2015–2025**, and rows with an unresolved airline name (`"Read more"`) are excluded.
-- Lounge name variations were standardized into **United Club** and **Polaris**; the rest are Other / Unclassified.
 
 ## Repository structure
 
@@ -221,13 +163,7 @@ Source: [add source / link here].
 └── requirements.txt
 ```
 
-Each file in `dataset/` is the output of the `sql/` file with the same name, for example `sql/03_category_recommendation_gap.sql` produces `dataset/03_category_recommendation_gap.csv`.
 
-## How to reproduce
-
-1. Run the queries in `sql/` against the review tables and save each result into `dataset/` under the same name.
-2. Install the dependencies: `pip install -r requirements.txt`
-3. Open the notebook in `notebooks/` and run it. It reads from `../dataset/` and saves charts to `../images/`.
 
 ## Tools
 
@@ -237,13 +173,12 @@ Each file in `dataset/` is the output of the `sql/` file with the same name, for
 
 ## Limitations
 
-- **Small sample.** There are only 125 United reviews. The rating gap is small but statistically real, and the recommendation gap is not distinguishable from zero.
-- **Older reviews dominate.** About 78% of United's reviews are from 2015–2019 and only about 24 are from 2022–2025. The First Class finding rests mainly on 2015–2017 reviews (23 of 26), so it may not describe the current experience.
+- **Small sample.** There are only 125 United reviews. 
 - **Small groups.** Pay to Use, Unknown lounge type, individual airports and brands have too few reviews to support firm conclusions.
-- **Big 3 comparison.** American and Delta have only 73 and 38 reviews, so treat those gaps as directional.
+- **Big 3 comparison.** American and Delta have only 73 and 38 reviews, so those gaps should be treated as directional.
 - **Self-selected reviews.** Online reviews over-represent customers with strong opinions, so compare relative gaps rather than reading absolute scores as the true average.
 - **Association, not cause.** The recommendation gap shows which categories go with recommending a lounge, not what causes it.
 
 ## Author
 
-[Your name] · [LinkedIn / portfolio link]
+Ngoc Ma
